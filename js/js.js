@@ -18,11 +18,6 @@ function verProductos(){
         productosContainer.innerHTML += `
             <div class="producto">
                 <div id="carrucel${producto.id}" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carrucel${producto.id}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carrucel${producto.id}" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carrucel${producto.id}" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="10000">
                             <img src="${producto.imgurl1}" class="d-block w-100" alt="...">  
@@ -46,10 +41,56 @@ function verProductos(){
                 <h2>${producto.nombre}</h2>
                 <p>Precio: $${producto.precio}</p>
                 <p>Envio: <span>${producto.envio}</span></p>
-                <button type="button" class="btn btn-outline-success">Agregar al carrito</button>
+                <button type="button" id="agrgaralcarrito" onclick="agrgarAlCarrito(${producto.id}), mostrarProdCarr()" class="btn btn-outline-success">Agregar al carrito</button>
             </div>
         ` 
     }
 }
 
 verProductos()
+
+
+
+let btnAgrgarAlCarrito = document.getElementById("agrgaralcarrito")
+
+let carrito = []
+
+function agrgarAlCarrito(id){
+    for (let producto of productos) {
+        if(id === producto.id) {
+            carrito.push(producto)
+        }
+    }
+}
+
+let carritoBody = document.getElementById("body-carrito")
+let carritoTotal = document.getElementById("carrito-total")
+let total = 0
+
+function mostrarProdCarr(){
+    carritoBody.innerHTML = ""
+    for (let productocarrito of carrito) {
+        carritoBody.innerHTML += `   
+        <div class="producto-carrito producto${productocarrito.id}"> 
+        <h2>${productocarrito.nombre}</h2>
+        <p>Precio: $${productocarrito.precio}</p>
+        <p>Envio: ${productocarrito.envio}</p>
+        <button type="button" id="borrarproductocarrito" onclick="borrarProducCarrito(${productocarrito.id})"><span class="material-symbols-outlined">
+        delete
+        </span></button>
+        </div>`
+        total = total + productocarrito.precio
+    }
+    carritoTotal.innerHTML = `<p>Total      = $${total}</p>`
+}
+
+
+function borrarProducCarrito(id){
+    for (let i = 0; i < carrito.length; i++) {
+        if(carrito[i].id === id)
+            carrito.splice(i, 1)
+            carritoBody.innerHTML = ""
+    }
+    total = 0
+    mostrarProdCarr()
+}
