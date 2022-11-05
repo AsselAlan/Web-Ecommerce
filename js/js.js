@@ -13,41 +13,43 @@ let productos = [
 ]
 
 
-function verProductos(){
+function renderProductos(){
     for (let producto of productos) {
         productosContainer.innerHTML += `
             <div class="producto">
-                <div id="carrucel${producto.id}" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="${producto.imgurl1}" class="d-block w-100" alt="...">  
+                <span class="span-ver-producto" data-bs-toggle="modal" href="#ver-producto" onclick="verProduc(${producto.id})">
+                    <div id="carrucel${producto.id}" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <img src="${producto.imgurl1}" class="d-block w-100" alt="...">  
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="${producto.imgurl2}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="${producto.imgurl3}" class="d-block w-100" alt="...">
+                            </div>
                         </div>
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img src="${producto.imgurl2}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="${producto.imgurl3}" class="d-block w-100" alt="...">
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carrucel${producto.id}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carrucel${producto.id}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carrucel${producto.id}" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carrucel${producto.id}" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <h2>${producto.nombre}</h2>
-                <p>Precio: $${producto.precio}</p>
-                <p>Envio: <span>${producto.envio}</span></p>
-                <button type="button" id="agrgaralcarrito" onclick="agrgarAlCarrito(${producto.id}), mostrarProdCarr()" class="btn btn-outline-success">Agregar al carrito</button>
+                    <h2>${producto.nombre}</h2>
+                    <p>Precio: $${producto.precio}</p>
+                    <p>Envio: <span>${producto.envio}</span></p>
+                </span>
+                    <button type="button" id="agrgaralcarrito" onclick="agrgarAlCarrito(${producto.id}), mostrarProdCarr()" class="btn btn-outline-success">Agregar al carrito</button>
             </div>
         ` 
     }
 }
 
-verProductos()
+renderProductos()
 
 
 
@@ -94,3 +96,43 @@ function borrarProducCarrito(id){
     total = 0
     mostrarProdCarr()
 }
+
+
+let verProducto = document.getElementById("modal-ver-producto")
+
+function verProduc(id){
+
+    for (let i = 0; i < productos.length; i++) {
+        if(productos[i].id === id)
+            verProducto.innerHTML = `   
+            <div class="ver-producto">
+                        <div id="carrucel${productos[i].id}" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <img src="${productos[i].imgurl1}" class="d-block w-100" alt="...">  
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="${productos[i].imgurl2}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="${productos[i].imgurl3}" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carrucel${productos[i].id}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carrucel${productos[i].id}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <h2>${productos[i].nombre}</h2>
+                        <p>Precio: $${productos[i].precio}</p>
+                        <p>Envio: <span>${productos[i].envio}</span></p>
+                </div>
+            ` 
+        }
+    }
+
+   
