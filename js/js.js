@@ -201,10 +201,14 @@ function agrgarAlCarrito(id){
             <div class="alert-incarrito animate__animated animate__fadeInRight" id="alert-incarrito${id}">
             <p>Producto agregado</p>
             </div>
-            `            
+            ` 
+            
         }
+
+        setTimeout(() => {
+            alertas.innerHTML = ""
+        }, 2000);   
     }   
-    console.log(carrito)
    
 }
 
