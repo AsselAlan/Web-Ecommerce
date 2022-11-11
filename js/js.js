@@ -126,6 +126,10 @@ function renderProductos(){
         }
 }
 
+let btnbuscar = document.getElementById("btnbuscar")
+btnbuscar.onclick = () => {renderProductos()}
+
+inputbuscador.onchange = ()=>{renderProductos()}
 
 renderProductos()
 
@@ -262,3 +266,8 @@ function vaciarCarrito(){
     total = 0
     mostrarProdCarr()
 }
+
+
+let btnvaciarcarrito = document.getElementById("btnvaciarcarrito")
+btnvaciarcarrito.onclick = () => {vaciarCarrito()}
+

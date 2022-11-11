@@ -24,7 +24,7 @@
             <a class="navbar-brand" href="#">Ecommerce</a>
         <div class="contenedor-button-nav">  
               <input class="form-control me-2 input-buscador" type="search" placeholder="Buscar" id="inputbuscador">
-              <button class="btn btn-success" onclick="renderProductos()">Buscar</button>
+              <button class="btn btn-success" id="btnbuscar">Buscar</button>
             <button type="button" class="btn btn-primary btn-carrito" data-bs-toggle="modal" data-bs-target="#carrito">
               <span class="material-symbols-outlined">shopping_cart</span>
               Carrito 
@@ -89,7 +89,7 @@
                   
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" onclick="vaciarCarrito()">Vaciar</button>
+                    <button type="button" class="btn btn-secondary" id="btnvaciarcarrito">Vaciar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-primary">Comprar</button>
                   </div>
