@@ -185,7 +185,7 @@ function verProduc(id){
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="agrgaralcarrito" onclick="agrgarAlCarrito(${productos[i].id}), mostrarProdCarr()" class="btn btn-outline-success">Agregar al carrito</button>
-                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Cerrar</button>
+                        <button class="btn btn-outline-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Cerrar</button>
                     </div>               
             ` 
         }
@@ -230,23 +230,25 @@ let carritoTotal = document.getElementById("carrito-total")
 let total = 0
 
 function mostrarProdCarr(){
-    
-    carritoBody.innerHTML = ""
-    for (let productocarrito of carrito) {
-        carritoBody.innerHTML += `   
-        <div class="producto-carrito producto${productocarrito.id}"> 
-        <h2>${productocarrito.nombre}</h2>
-        <p>Precio: $${productocarrito.precio}</p>
-        <p>Envio: ${productocarrito.envio}</p>
-        <button type="button" id="agrgaralcarrito" href="#ver-producto" data-bs-toggle="modal" onclick="verProduc(${productocarrito.id})" class="btn btn-outline-success">Ver</button>
-        <button type="button" id="borrarproductocarrito" onclick="borrarProducCarrito(${productocarrito.id})" class="btndelete"><span class="material-symbols-outlined">
-        delete
-        </span></button>
-        </div>`
-        total = total + productocarrito.precio
+    if(carrito == ""){
+        carritoBody.innerHTML += `<h3>No se agrego ningun producto al carrito...</h3>` 
+    }else{
+        carritoBody.innerHTML = ""
+        for (let productocarrito of carrito) {
+            carritoBody.innerHTML += `   
+            <div class="producto-carrito producto${productocarrito.id}"> 
+            <h2>${productocarrito.nombre}</h2>
+            <p>Precio: $${productocarrito.precio}</p>
+            <p>Envio: ${productocarrito.envio}</p>
+            <button type="button" id="agrgaralcarrito" href="#ver-producto" data-bs-toggle="modal" onclick="verProduc(${productocarrito.id})" class="btn btn-outline-success">Ver</button>
+            <button type="button" id="borrarproductocarrito" onclick="borrarProducCarrito(${productocarrito.id})" class="btndelete"><span class="material-symbols-outlined">
+            delete
+            </span></button>
+            </div>`
+            total = total + productocarrito.precio
+        }
     }
     carritoTotal.innerHTML = `<p>Total: $${total}</p>`
-
 }
 
 mostrarProdCarr()
