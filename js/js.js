@@ -231,7 +231,7 @@ let total = 0
 
 function mostrarProdCarr(){
     if(carrito == ""){
-        carritoBody.innerHTML += `<h3>No se agrego ningun producto al carrito...</h3>` 
+        carritoBody.innerHTML = `<h3>No se agrego ningun producto al carrito...</h3>` 
     }else{
         carritoBody.innerHTML = ""
         for (let productocarrito of carrito) {
