@@ -21,6 +21,10 @@ nav .container-nav .contenedor-button-nav{
     display: flex;
 }
 
+nav .container-nav .input-buscador{
+    width: 400px;
+}
+
 nav .container-nav .btn-carrito{
     display: flex;
     margin: 0% 5%;
@@ -174,6 +178,15 @@ nav .container-nav .btn-carrito{
 
 /* Carrito */
 
+
+.carrito .container-productos{
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+.carrito .modal-dialog{
+    width: 60%;
+}
+
 .producto-carrito{
     display: flex;
     justify-content: center;
@@ -189,8 +202,9 @@ nav .container-nav .btn-carrito{
     font-size: 12px; 
     margin: 0 20px;
 }
- 
-.producto-carrito button{
+
+
+.producto-carrito .btndelete{
     margin: 0 20px;
     border: none;
     background-color: transparent;
@@ -201,18 +215,22 @@ nav .container-nav .btn-carrito{
     padding: 5px;
     border: none;
     border-radius: 50px;
-    background-color: rgba(255, 0, 0, 0.781);
-    color: whitesmoke;
-}
-
-.titulomodal{
-    font-size: 25px;
-    font-weight: 600;   
+    color: rgba(255, 0, 0, 0.781);
+    border: solid 2px rgba(255, 0, 0, 0.781);
+    border-radius: 50px;
+    background-color: transparent;
 }
 
 .producto-carrito span:hover{
     background-color: transparent;
-    color: black;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.781);
+}
+
+
+.titulomodal{
+    font-size: 25px;
+    font-weight: 600;   
 }
 
 .carrito-total p{

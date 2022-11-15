@@ -87,7 +87,7 @@ function renderProductos(){
             if(nombre.indexOf(buscadorvalue) !== -1){
                 productosContainer.innerHTML += `
                 <div class="producto">
-                    <span class="span-ver-producto" data-bs-toggle="modal" href="#ver-producto" onclick="verProduc(${producto.id})">
+                    <span class="span-ver-producto">
                         <div id="carrucel${producto.id}" class="carousel carousel-dark slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                  <div class="carousel-item active" data-bs-interval="10000">
@@ -114,6 +114,7 @@ function renderProductos(){
                         <p>Envio: <span>${producto.envio}</span></p>
                     </span>
                         <button type="button" id="agrgaralcarrito" onclick="agrgarAlCarrito(${producto.id}), mostrarProdCarr()" class="btn btn-outline-success">Agregar al carrito</button>
+                        <button type="button" id="agrgaralcarrito" href="#ver-producto" data-bs-toggle="modal" onclick="verProduc(${producto.id})" class="btn btn-outline-success">Ver producto</button>
                 </div>
             ` 
             }
@@ -195,9 +196,16 @@ function verProduc(id){
 let btnAgrgarAlCarrito = document.getElementById("agrgaralcarrito")
 let alertas = document.getElementById("alertas")
 
+
 let carrito = []
+if (localStorage.getItem('carrito')){
+    carrito = JSON.parse(localStorage.getItem('carrito'))
+    
+}
+
 
 function agrgarAlCarrito(id){
+    
     for (let producto of productos) {
         if(id === producto.id) {
             carrito.push(producto)
@@ -208,12 +216,13 @@ function agrgarAlCarrito(id){
             ` 
             
         }
-
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+        
         setTimeout(() => {
             alertas.innerHTML = ""
         }, 2000);   
+
     }   
-   
 }
 
 let carritoBody = document.getElementById("body-carrito")
@@ -221,6 +230,7 @@ let carritoTotal = document.getElementById("carrito-total")
 let total = 0
 
 function mostrarProdCarr(){
+    
     carritoBody.innerHTML = ""
     for (let productocarrito of carrito) {
         carritoBody.innerHTML += `   
@@ -228,14 +238,18 @@ function mostrarProdCarr(){
         <h2>${productocarrito.nombre}</h2>
         <p>Precio: $${productocarrito.precio}</p>
         <p>Envio: ${productocarrito.envio}</p>
-        <button type="button" id="borrarproductocarrito" onclick="borrarProducCarrito(${productocarrito.id})"><span class="material-symbols-outlined">
+        <button type="button" id="agrgaralcarrito" href="#ver-producto" data-bs-toggle="modal" onclick="verProduc(${productocarrito.id})" class="btn btn-outline-success">Ver</button>
+        <button type="button" id="borrarproductocarrito" onclick="borrarProducCarrito(${productocarrito.id})" class="btndelete"><span class="material-symbols-outlined">
         delete
         </span></button>
         </div>`
         total = total + productocarrito.precio
     }
     carritoTotal.innerHTML = `<p>Total: $${total}</p>`
+
 }
+
+mostrarProdCarr()
 
 let offcarrito = document.getElementById("alert-offcarrito")
 
@@ -249,21 +263,16 @@ function borrarProducCarrito(id){
             carritoBody.innerHTML = ""
     }
     total = 0
-    offcarrito.classList.remove("animate__fadeOutRight")
-    offcarrito.classList.remove("alert-off")
-    offcarrito.classList.add("animate__fadeInRight")
-    setTimeout(()=>{
-        offcarrito.classList.add("animate__fadeOutRight")
-        offcarrito.classList.remove("animate__fadeInRight")
-    } , 1200);
+ 
+    localStorage.setItem('carrito', JSON.stringify(carrito))
     mostrarProdCarr()
-    console.log(carrito)
 }
 
 
 function vaciarCarrito(){
     carrito = []
     total = 0
+    localStorage.removeItem('carrito')
     mostrarProdCarr()
 }
 
