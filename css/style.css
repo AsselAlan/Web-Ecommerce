@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -5,10 +7,15 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
 }
 
 /* nav */
+
+.navbar{
+    background-color: black;
+}
 
 nav .container-nav{
     width: 100%;
@@ -28,131 +35,221 @@ nav .container-nav .input-buscador{
 nav .container-nav .btn-carrito{
     display: flex;
     margin: 0% 5%;
+    border: none;
+    background-color: transparent;
 }
+nav .container-nav .btn-carrito span{
+   font-size: 30px;
+}
+
+
+.buscador {
+    position: flex;
+    margin-top: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+  }
+  
+  .search-box input[type=text] {
+    border: none;
+    background: none;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    transition: all 0.25s ease-in 0.25s;
+    color: transparent;
+    font-size: 0.75rem;
+    line-height: 25px;
+    margin-top: 5px;
+    
+  }
+
+  .search-box input[type=text]:hover {
+    cursor: pointer;
+  }
+  .search-box input[type=text]:hover:focus {
+    cursor: text;
+  }
+  .search-box input[type=text]:hover + span {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .search-box input[type=text]:focus {
+    width: 150px;
+    padding: 0 10px;
+    outline: none;  
+    color: black;
+    background: none;
+    color: white;   
+  }
+  .search-box input[type=text]:focus + span {
+    width: 200px;
+    height: 30px;
+  }
+  .search-box input[type=text]:focus + span::before {
+    width: 2px;
+    opacity: 0;
+    transition: all 0.25s ease-in;
+  }
+  .search-box input[type=text] + span {
+    z-index: -1;
+    position: absolute;
+    border: 2px solid white;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    transition: all 0.25s ease-in 0.25s;
+    border-radius: 25px;
+    left: 0;
+  }
+  .search-box input[type=text] + span::before {
+    transition: all 0.25s ease-in 0.5s;
+    transform-origin: left top;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    border-radius: 5px;
+    background: white;
+    transform: rotate(45deg) translate(26px, -2px);
+  }
 
 
 /* Productos */
 
-.section-productos{
-    margin-top: 5%;
-    width: 100%;
-}
-
-.section-productos .productos-container { 
+.productos-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 10%;
-    margin-top: 5%;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
-.section-productos .productos-container a{ 
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-}
-.section-productos .productos-container .producto{ 
-    margin: 10% 10%;
-    padding: 5% 5%;
-
-    text-align: center;
-
-    border: 1px solid rgba(0, 0, 0, 0.484);
-    border-radius: 25px;
-    box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.2);
+.productos-container .container {
+    margin: 10%;
+    position: relative;
+    height: 600px;
+    width: 350px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.418);
 }
 
-.section-productos .productos-container .span-ver-producto{ 
-    cursor: pointer;
+.productos-container .head__section img {
+    width: 100px;
 }
 
-.section-productos .productos-container .producto img{ 
-    max-width:100%
-}
-.section-productos .productos-container .producto h2{ 
-    font-size: 30px;
-}
-.section-productos .productos-container .producto p{ 
-    font-size: 25px;
-}
-.section-productos .productos-container span span{ 
-    color: #198754
-}
-.section-productos .productos-container button{ 
-    font-size: 20px;
-    border-radius: 25px;
-    margin: 5% 1%;
-}
-
-.error{
+.productos-container .display__product {
     width: 100%;
-    padding-top: 10%;
-}
-
-@media (max-width: 1024px) {
-    .section-productos .productos-container { 
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media (max-width: 720px) {
-    .section-productos .productos-container { 
-        grid-template-columns: 1fr;
-        margin-top: 10%;
-        padding-top: 10%;
-    }
-    nav .container-nav{
-        display: flex;
-        flex-wrap: inherit;
-        justify-content: center;
-    }
-    nav .container-nav .contenedor-button-nav{
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-/* Ver productos */
-
-.section-ver-productos .modal-dialog{
-    margin-top: 5%;
-}
-
-.section-ver-productos .ver-producto{
+    border-radius: 50%;
+    z-index: 10;
     display: flex;
-    overflow-y: scroll;
+    justify-content: center;
 }
 
-.ver-producto .carousel{
-    margin: 0 5%;
-    width: 450px;
+.productos-container .display__product img{
+    width: 90%;
 }
 
-.ver-producto .carousel img{
-    height: 450px;
-}
-
-
-.ver-producto .producto-info{ 
-    margin-top: 20px; 
-}
-
-.ver-producto .producto-info h2{ 
-  font-size: 40px;
-}
-
-.ver-producto .producto-info div{ 
+.productos-container .display__products__list{
+    width: 100%;
+    height: 70px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 5% 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
 }
 
-.ver-producto .producto-info div p{ 
+.productos-container .display__products__list img{
+    margin: auto;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.productos-container .display__products__list img:hover{
+    zoom: 1.1;
+}
+
+.productos-container .title__section {
+    margin: 5% 5%   ;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.productos-container .heart {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+  }
+
+.heart__click {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+    background-position: -2800px 0;
+    transition: background 1s steps(28);
+  }
+  @keyframes fave-heart {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -2800px 0;
+    }
+  }  
+
+
+.productos-container .title h2 {
+    color: #424aa4;
+    font-weight: 600;
+}
+
+.productos-container .title p {
     font-size: 20px;
-    margin-left: 10%;
+    color: #424aa4;
+    margin: 0;
 }
 
-.ver-producto .producto-info h3{ 
+.productos-container .product__add {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+}
+
+.productos-container .product__add .price {
     font-size: 30px;
+    font-weight: 700;
+    color: #121212;
+}
+
+.productos-container button {
+    height: 40px;
+    padding: 5px 10px;
+    width: 150px;
+    background: #e0e0e0;
+    color: #424aa4;
+    border-radius: 20px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Baloo 2", cursive;
+    cursor: pointer;
+}
+
+.productos-container button:hover{
+    background: #424aa4;
+    color: #e0e0e0; 
 }
 
 @media (max-width: 1360px) {
@@ -176,33 +273,65 @@ nav .container-nav .btn-carrito{
 }
 }
 
-/* Carrito */
+/* Carrito */ 
 
+.carrito{
+    margin-top: 50px;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito-off{
+    display: none;
+}
 
 .carrito .container-productos{
-    max-height: 60vh;
-    overflow-y: scroll;
-}
-.carrito .modal-dialog{
     width: 60%;
+    height: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.432);
+    overflow-y: auto;
 }
+.carrito .container-productos h3{
+    margin: 5%;
+    text-align: center;
+}
+
 
 .producto-carrito{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10% 0;
+    padding: 5%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
+
 .producto-carrito h2{
+    font-size: 30px; 
+    margin: 0 20px;
+    color: black;
+}
+
+.producto-carrito p{
     font-size: 20px; 
     margin: 0 20px;
 }
-.producto-carrito p{
-    font-size: 12px; 
-    margin: 0 20px;
+
+.carrito-total {
+   width: 60%;
+   display: flex;
 }
 
+.carrito-total p{
+   font-size: 40px;
+   font-weight: 600;
+}
 
 .producto-carrito .btndelete{
     margin: 0 20px;
@@ -227,77 +356,88 @@ nav .container-nav .btn-carrito{
     background-color: rgba(255, 0, 0, 0.781);
 }
 
-
-.titulomodal{
-    font-size: 25px;
-    font-weight: 600;   
+.carrito-btns{
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: end;
+}
+.carrito-btns .btn{
+   margin: 10px 20px;
+   border:1px solid black;
+   color: black;
+   height: 50px;
 }
 
-.carrito-total p{
-   font-size: 20px;
-   font-weight: 600;
+.carrito-btns .btn:hover{
+   background-color: #00000080;
 }
 
 
-/* alertas */
 
-.alertas{
+.section_home{
+    margin-top: 50px;
+    height: 70vh;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    justify-content: flex-end;
-}
+    background-image: url(https://www.apple.com/v/iphone-14-pro/b/images/overview/hero/hero_endframe__cvklg0xk3w6e_large.jpg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000000;
 
-.alert-incarrito{
-    width: 300px;
-    height: 70px;
     display: flex;
+    flex-direction: column;
+    justify-content: end;
     align-items: center;
-    justify-content: center;
-    background-color: #198754;
-    color: white;
-    font-size: 20px;
-    border-radius: 25px;
-
-    margin-right: 5%;
-    margin-bottom: 5%;
-   
-    z-index: 100;
-}
-.alert-incarrito p{
-   margin: 0;
-   text-align: center;
+    padding-bottom: 40px;  
+    box-shadow: 0px 10px 25px 25px rgb(0, 0, 0);
 }
 
-.alert-offcarrito{
-    width: 300px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #871919;
+.section_home p{
     color: white;
-    font-size: 20px;
-    border-radius: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+h2{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+}
+
+.section_home h2{
+    font-size: 50px;
+}
+
+.section-img{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
     
-    margin-right: 5%;
-    margin-bottom: 5%;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    padding: 0 5%;
+    margin-top: 5%;
+}
+.section-img div{
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
 }
 
-.alert-offcarrito p{
-   margin: 0;
-   text-align: center;
+.section-img h2{
+    color: black;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.alert-off{
-    display: none;
-}
+.img-one{background-image: url(https://www.apple.com/newsroom/images/tile-images/Apple_watch_series_5_introduces-always-on-retina-display_091019.jpg.news_app_ed.jpg);}
+.img-two{background-image: url(https://www.apple.com/v/macbook-pro-14-and-16/c/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png);}
+.img-trhee{background-image: url(https://www.apple.com/mx/iphone-14/images/overview/hero/hero_all_colors__dvlwc1u257qu_large.jpg);}
+.img-four{background-image: url(https://www.apple.com/newsroom/images/product/ipad/standard/Apple-iPad-10th-gen-hero-221018.jpg.landing-big_2x.jpg);}
 
-.alert-on{
-    display: block;
-}
