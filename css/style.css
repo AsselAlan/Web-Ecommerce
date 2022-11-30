@@ -252,31 +252,11 @@ nav .container-nav .btn-carrito span{
     color: #e0e0e0; 
 }
 
-@media (max-width: 1360px) {
-    .ver-producto .carousel{
-        margin: 0 5%;
-        width: 350px;
-        height: 350px;
-    }
-    
-    .ver-producto .carousel img{
-        height: 350px;
-    }
-    
-.ver-producto .producto-info div p{ 
-    font-size: 15px;
-    margin-left: 10%;
-}
-
-.ver-producto .producto-info h3{ 
-    font-size: 20px;
-}
-}
 
 /* Carrito */ 
 
 .carrito{
-    margin-top: 50px;
+    padding-top: 70px;
     background-color: #fff;
     width: 100%;
     height: 100vh;
@@ -298,6 +278,7 @@ nav .container-nav .btn-carrito span{
     border: 1px solid rgba(0, 0, 0, 0.432);
     overflow-y: auto;
 }
+
 .carrito .container-productos h3{
     margin: 5%;
     text-align: center;
@@ -314,7 +295,7 @@ nav .container-nav .btn-carrito span{
 
 .producto-carrito h2{
     font-size: 30px; 
-    margin: 0 20px;
+    margin: 0px 20px;
     color: black;
 }
 
@@ -325,12 +306,16 @@ nav .container-nav .btn-carrito span{
 
 .carrito-total {
    width: 60%;
+   height: 10%;
    display: flex;
+   border-bottom: 1px solid black;
+   align-items: center;
 }
 
 .carrito-total p{
    font-size: 40px;
    font-weight: 600;
+   margin: 0;
 }
 
 .producto-carrito .btndelete{
@@ -363,15 +348,17 @@ nav .container-nav .btn-carrito span{
     justify-content: end;
 }
 .carrito-btns .btn{
-   margin: 10px 20px;
+   margin: 30px 20px;
    border:1px solid black;
    color: black;
-   height: 50px;
+   height: 40px;
 }
 
 .carrito-btns .btn:hover{
    background-color: #00000080;
 }
+
+
 
 
 
@@ -396,16 +383,16 @@ nav .container-nav .btn-carrito span{
 .section_home p{
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
 }
+
 h2{
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 600;
-}
-
-.section_home h2{
+    font-weight: 400;
     font-size: 50px;
 }
+
 
 .section-img{
     width: 100%;
@@ -417,6 +404,7 @@ h2{
     padding: 0 5%;
     margin-top: 5%;
 }
+
 .section-img div{
     width: 100%;
     height: 50vh;
@@ -435,9 +423,108 @@ h2{
     font-weight: 600;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
+.section-img h2 svg{ 
+    width: 60px;
+    height: 60px;
+}
 
 .img-one{background-image: url(https://www.apple.com/newsroom/images/tile-images/Apple_watch_series_5_introduces-always-on-retina-display_091019.jpg.news_app_ed.jpg);}
 .img-two{background-image: url(https://www.apple.com/v/macbook-pro-14-and-16/c/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png);}
-.img-trhee{background-image: url(https://www.apple.com/mx/iphone-14/images/overview/hero/hero_all_colors__dvlwc1u257qu_large.jpg);}
-.img-four{background-image: url(https://www.apple.com/newsroom/images/product/ipad/standard/Apple-iPad-10th-gen-hero-221018.jpg.landing-big_2x.jpg);}
+.img-trhee{background-image: url(https://www.mgmstore.com.ar/1389-large_default/apple-iPhone-14-Pro-128GB.jpg);}
+.img-four{background-image: url(https://www.apple.com/newsroom/images/product/ipad/standard/apple_ipad-8th-gen_w-keyboard_09152020.jpg.og.jpg?202211032014);}
 
+@media (max-width: 1360px) {
+    .ver-producto .carousel{
+        margin: 0 5%;
+        width: 350px;
+        height: 350px;
+    }
+    
+    .ver-producto .carousel img{
+        height: 350px;
+    }
+    
+.ver-producto .producto-info div p{ 
+    font-size: 15px;
+    margin-left: 10%;
+}
+
+.ver-producto .producto-info h3{ 
+    font-size: 20px;
+}
+}
+
+@media (max-width: 1120px) {
+   
+.productos-container{
+
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.section-img h2{
+    font-size: 40px;
+}
+
+.carrito .container-productos{
+    width: 100%;
+    height: 65%;
+}
+
+.producto-carrito h2{
+    font-size: 20px; 
+    margin: 0 10px;
+}
+
+.producto-carrito p{
+    font-size: 15px; 
+    margin: 0;
+}
+
+.carrito-btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carrito-total{
+    width: 100%;
+    justify-content: center;
+}
+
+.carrito-total p{
+   font-size: 30px;
+}
+
+.producto-carrito span  {
+    font-size: 20px;
+}
+
+
+.btn{
+   margin: 0;
+}
+}
+
+
+@media (max-width: 756px) {
+   
+.productos-container{
+    grid-template-columns: 1fr;
+}
+
+.section-img h2{
+    font-size: 30px;
+}
+
+.section-img h2 svg{
+    width: 30px;
+    height: 30px;
+}
+
+.section-img div{
+    margin-top: 20px;
+    height: 30vh;
+}
+
+}

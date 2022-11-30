@@ -205,7 +205,7 @@ function mostrarProdCarr(){
             </svg>${productocarrito.nombre}</h2>
             <p>Precio: $${productocarrito.precio}</p>
             <p>Envio: ${productocarrito.envio}</p>
-            <button type="button" id="agrgaralcarrito" href="#ver-producto" data-bs-toggle="modal" onclick="verProduc(${productocarrito.id})" class="btn btn-outline-success">Ver</button>
+            <button type="button" id="agrgaralcarrito" href="#ver-producto" data-bs-toggle="modal" onclick="verProduc(${productocarrito.id})" class="btn">Ver</button>
             <button type="button" id="borrarproductocarrito" onclick="borrarProducCarrito(${productocarrito.id})" class="btndelete"><span class="material-symbols-outlined">
             delete
             </span></button>
