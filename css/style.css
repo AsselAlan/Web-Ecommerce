@@ -136,6 +136,7 @@ nav .container-nav .btn-carrito span{
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.418);
 }
 
+
 .productos-container .head__section img {
     width: 100px;
 }
@@ -212,6 +213,7 @@ nav .container-nav .btn-carrito span{
 .productos-container .title h2 {
     color: #424aa4;
     font-weight: 600;
+    font-size: 30px;
 }
 
 .productos-container .title p {
@@ -227,7 +229,7 @@ nav .container-nav .btn-carrito span{
 }
 
 .productos-container .product__add .price {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     color: #121212;
 }
