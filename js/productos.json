@@ -1,0 +1,92 @@
+[
+    {"id": 1, "nombre": "Iphone 13 128GB", "precio": 55000, "stock": 5, "marca":"Iphone", "envio":"Gratis", 
+    "imagenes":{
+        "imgurl1":"https://exitocol.vtexassets.com/arquivos/ids/10498530-1200-auto?v=637697437067800000&width=1200&height=auto&aspect=true",
+        "imgurl2":"https://exitocol.vtexassets.com/arquivos/ids/10498531-1200-auto?v=637697437068730000&width=1200&height=auto&aspect=true", 
+        "imgurl3":"https://exitocol.vtexassets.com/arquivos/ids/10498532-1200-auto?v=637697437070130000&width=1200&height=auto&aspect=true"
+    },
+    "caracteristicas":{
+        "memoriainterna": "64 GB", "camaratrasera": "50 Mpx", "camarafrontal": "5 Mpx", "memoriaram": "3 GB", "microsd": "512 GB", "sisop": "Apple" 
+    }
+    },
+    {"id": 2, "nombre": "Iphone 13 128GB", "precio": 55000, "stock": 5, "marca":"Iphone", "envio":"Gratis", 
+    "imagenes":{
+        "imgurl1":"https://exitocol.vtexassets.com/arquivos/ids/14412098-1200-auto?v=637974729252230000&width=1200&height=auto&aspect=true", 
+        "imgurl2":"https://exitocol.vtexassets.com/arquivos/ids/14412099-1200-auto?v=637974729253800000&width=1200&height=auto&aspect=true", 
+        "imgurl3":"https://exitocol.vtexassets.com/arquivos/ids/10498584-1200-auto?v=637697437321830000&width=1200&height=auto&aspect=true"
+    },
+    "caracteristicas":{
+        "memoriainterna": "64 GB", "camaratrasera": "50 Mpx", "camarafrontal": "5 Mpx", "memoriaram": "3 GB", "microsd": "512 GB", "sisop": "Apple" 
+    }
+    },
+    {"id": 3, "nombre": "Iphone 13 128GB", "precio": 55000, "stock": 5, "marca":"Iphone", "envio":"Gratis", 
+    "imagenes":{
+        "imgurl1":"https://exitocol.vtexassets.com/arquivos/ids/11758176-1200-auto?v=637799293593630000&width=1200&height=auto&aspect=true", 
+        "imgurl2":"https://exitocol.vtexassets.com/arquivos/ids/11758177-1200-auto?v=637799293595030000&width=1200&height=auto&aspect=true", 
+        "imgurl3":"https://exitocol.vtexassets.com/arquivos/ids/11758179-1200-auto?v=637799293597830000&width=1200&height=auto&aspect=true"
+    },
+    "caracteristicas":{
+        "memoriainterna": "64 GB", "camaratrasera": "50 Mpx", "camarafrontal": "5 Mpx", "memoriaram": "3 GB", "microsd": "512 GB", "sisop": "Apple" 
+    }
+    },
+    {"id": 4, "nombre": "Iphone 12 128GB", "precio": 55000, "stock": 5, "marca":"Iphone", "envio":"Gratis", 
+    "imagenes":{
+        "imgurl1":"https://exitocol.vtexassets.com/arquivos/ids/4950685-1200-auto?v=637405668416670000&width=1200&height=auto&aspect=true", 
+        "imgurl2":"https://exitocol.vtexassets.com/arquivos/ids/4950686-1200-auto?v=637405668418400000&width=1200&height=auto&aspect=true", 
+        "imgurl3":"https://exitocol.vtexassets.com/arquivos/ids/4950687-1200-auto?v=637405668422300000&width=1200&height=auto&aspect=true"
+    },
+    "caracteristicas":{
+        "memoriainterna": "64 GB", "camaratrasera": "50 Mpx", "camarafrontal": "5 Mpx", "memoriaram": "3 GB", "microsd": "512 GB", "sisop": "Apple" 
+    }
+    },
+    {"id": 5, "nombre": "Iphone 12 128GB", "precio": 55000, "stock": 5, "marca":"Iphone", "envio":"Gratis",  
+    "imagenes":{
+        "imgurl1":"https://exitocol.vtexassets.com/arquivos/ids/4950761-1200-auto?v=637405686436800000&width=1200&height=auto&aspect=true", 
+        "imgurl2":"https://exitocol.vtexassets.com/arquivos/ids/4950762-1200-auto?v=637405686438200000&width=1200&height=auto&aspect=true", 
+        "imgurl3":"https://exitocol.vtexassets.com/arquivos/ids/4950763-1200-auto?v=637405686440870000&width=1200&height=auto&aspect=true"
+    },
+    "caracteristicas":{
+        "memoriainterna": "64 GB", "camaratrasera": "50 Mpx", "camarafrontal": "5 Mpx", "memoriaram": "3 GB", "microsd": "512 GB", "sisop": "Apple" 
+    }
+    },
+    {"id": 6, "nombre": "Iphone 12 64GB", "precio": 55000, "stock": 5, "marca":"Iphone", "envio":"Gratis",  
+    "imagenes":{
+        "imgurl1":"https://exitocol.vtexassets.com/arquivos/ids/4950761-1200-auto?v=637405686436800000&width=1200&height=auto&aspect=true", 
+        "imgurl2":"https://exitocol.vtexassets.com/arquivos/ids/4950762-1200-auto?v=637405686438200000&width=1200&height=auto&aspect=true", 
+        "imgurl3":"https://exitocol.vtexassets.com/arquivos/ids/4950763-1200-auto?v=637405686440870000&width=1200&height=auto&aspect=true"
+    },
+    "caracteristicas":{
+        "memoriainterna": "64 GB", "camaratrasera": "50 Mpx", "camarafrontal": "5 Mpx", "memoriaram": "3 GB", "microsd": "512 GB", "sisop": "Apple" 
+    }
+    },
+    {"id": 7, "nombre": "Iphone 11 64GB", "precio": 55000, "stock": 5, "marca":"Iphone", "envio":"Gratis",  
+    "imagenes":{
+        "imgurl1":"https://exitocol.vtexassets.com/arquivos/ids/4995802-1200-auto?v=637413375475100000&width=1200&height=auto&aspect=true", 
+        "imgurl2":"https://exitocol.vtexassets.com/arquivos/ids/4995803-1200-auto?v=637413375476500000&width=1200&height=auto&aspect=true", 
+        "imgurl3":"https://exitocol.vtexassets.com/arquivos/ids/4996626-1200-auto?v=637413410824870000&width=1200&height=auto&aspect=true"
+    },
+    "caracteristicas":{
+        "memoriainterna": "64 GB", "camaratrasera": "50 Mpx", "camarafrontal": "5 Mpx", "memoriaram": "3 GB", "microsd": "512 GB", "sisop": "Apple" 
+    }
+    },
+    {"id": 8, "nombre": "Iphone 11 64GB", "precio": 55000, "stock": 5, "marca":"Iphone", "envio":"Gratis",  
+    "imagenes":{
+        "imgurl1":"https://exitocol.vtexassets.com/arquivos/ids/4996624-1200-auto?v=637413410821430000&width=1200&height=auto&aspect=true", 
+        "imgurl2":"https://exitocol.vtexassets.com/arquivos/ids/4996625-1200-auto?v=637413410823470000&width=1200&height=auto&aspect=true", 
+        "imgurl3":"https://exitocol.vtexassets.com/arquivos/ids/4950763-1200-auto?v=637405686440870000&width=1200&height=auto&aspect=true"
+    },
+    "caracteristicas":{
+        "memoriainterna": "64 GB", "camaratrasera": "50 Mpx", "camarafrontal": "5 Mpx", "memoriaram": "3 GB", "microsd": "512 GB", "sisop": "Apple" 
+    }
+    },
+    {"id": 9, "nombre": "Iphone 11 64GB", "precio": 55000, "stock": 5, "marca":"Iphone", "envio":"Gratis",  
+    "imagenes":{
+        "imgurl1":"https://exitocol.vtexassets.com/arquivos/ids/4999342-1200-auto?v=637413517630030000&width=1200&height=auto&aspect=true", 
+        "imgurl2":"https://exitocol.vtexassets.com/arquivos/ids/4999343-1200-auto?v=637413517632200000&width=1200&height=auto&aspect=true", 
+        "imgurl3":"https://exitocol.vtexassets.com/arquivos/ids/4999344-1200-auto?v=637413517633470000&width=1200&height=auto&aspect=true"
+    },
+    "caracteristicas":{
+        "memoriainterna": "64 GB", "camaratrasera": "50 Mpx", "camarafrontal": "5 Mpx", "memoriaram": "3 GB", "microsd": "512 GB", "sisop": "Apple" 
+    }
+    }
+]

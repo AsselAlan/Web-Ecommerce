@@ -136,6 +136,18 @@ nav .container-nav .btn-carrito span{
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.418);
 }
 
+.productos-container .error{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+}
+
+.productos-container h2{
+    color: #000;
+    text-align: left;
+    margin-left: 20px;
+}
+
 
 .productos-container .head__section img {
     width: 100px;
@@ -275,7 +287,7 @@ nav .container-nav .btn-carrito span{
 }
 
 .carrito .container-productos{
-    width: 60%;
+    width: 70%;
     height: 70%;
     border: 1px solid rgba(0, 0, 0, 0.432);
     overflow-y: auto;
@@ -288,34 +300,35 @@ nav .container-nav .btn-carrito span{
 
 
 .producto-carrito{
+    height: 130px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 5%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .producto-carrito h2{
-    font-size: 30px; 
+    font-size: 20px; 
     margin: 0px 20px;
     color: black;
 }
 
 .producto-carrito p{
-    font-size: 20px; 
+    font-size: 15px; 
     margin: 0 20px;
 }
 
 .carrito-total {
-   width: 60%;
+   width: 70%;
    height: 10%;
    display: flex;
-   border-bottom: 1px solid black;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.486);
    align-items: center;
 }
 
 .carrito-total p{
-   font-size: 40px;
+   font-size: 30px;
    font-weight: 600;
    margin: 0;
 }
@@ -326,43 +339,70 @@ nav .container-nav .btn-carrito span{
     background-color: transparent;
 }
 
+.producto-carrito .btn{
+    height: 45px;
+    width: 45px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    background: #424aa4;
+    color: #e0e0e0; 
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.producto-carrito .btn:hover{
+    background: #e0e0e0;
+    color: #424aa4;
+    border: solid 2px #424aa4;
+}
+
 .producto-carrito span  {
     font-size: 30px;
     padding: 5px;
     border: none;
     border-radius: 50px;
-    color: rgba(255, 0, 0, 0.781);
+    color: white;
+    background-color: rgba(255, 0, 0, 0.781);
     border: solid 2px rgba(255, 0, 0, 0.781);
     border-radius: 50px;
-    background-color: transparent;
 }
 
 .producto-carrito span:hover{
     background-color: transparent;
-    color: white;
-    background-color: rgba(255, 0, 0, 0.781);
+    color: rgba(255, 0, 0, 0.781);
+    border: solid 2px rgba(255, 0, 0, 0.781);
 }
 
 .carrito-btns{
-    width: 60%;
+    width: 70%;
     height: 20%;
     display: flex;
     justify-content: end;
 }
 .carrito-btns .btn{
    margin: 30px 20px;
-   border:1px solid black;
-   color: black;
-   height: 40px;
+   height: 50px;
+   width: 100px;
+   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+   font-size: 15px;
+   font-weight: 600;
+   background: #e0e0e0;
+   color: #424aa4;
+   border-radius: 20px;
+   border: none;
+   text-transform: uppercase;
+   cursor: pointer;
 }
 
 .carrito-btns .btn:hover{
-   background-color: #00000080;
+    background: #424aa4;
+    color: #e0e0e0; 
 }
-
-
-
-
 
 .section_home{
     margin-top: 50px;
@@ -386,6 +426,7 @@ nav .container-nav .btn-carrito span{
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 20px;
+    text-align: center;
 }
 
 h2{
@@ -393,6 +434,7 @@ h2{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 400;
     font-size: 50px;
+    text-align: center;
 }
 
 
@@ -495,12 +537,9 @@ h2{
 }
 
 .carrito-total p{
-   font-size: 30px;
+   font-size: 25px;
 }
 
-.producto-carrito span  {
-    font-size: 20px;
-}
 
 
 .btn{
@@ -528,5 +567,14 @@ h2{
     margin-top: 20px;
     height: 30vh;
 }
+
+.producto-carrito span  {
+    font-size: 20px;
+}
+.producto-carrito .btn  {
+    max-width: 35px;
+    max-height: 35px;
+}
+
 
 }
